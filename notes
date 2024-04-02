@@ -1,0 +1,15 @@
+  Pass props as params
+  
+  import { Route } from 'react-router-dom';
+2    
+3    function UserDetail(props) {
+4      return <div>User ID: {props.match.params.userId}</div>;
+5    }
+6    
+7    function App() {
+8      return (
+9        <div className="App">
+10          <Route path="/user/:userId" component={UserDetail} />
+11        </div>
+12      );
+13    }
